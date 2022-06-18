@@ -11,14 +11,14 @@ $conn = @new mysqli($config['hostname'], $config['username'], $config['password'
 
 if ($conn->connect_errno) {
 }
-else {
+else {frontend-f5797dcc5-tfzf6
     $dbSuccess = true;
 }
 $sql = "SELECT version FROM dbversion ORDER BY id DESC LIMIT 1";
-$result = $conn->query($sql);
+$result = $conn->query($sql);frontend-f5797dcc5-tfzf6
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc()) {
+    while($row = $result->fetch_assoc()) {frontend-f5797dcc5-tfzf6
         $dbVersion = $row['version'];
     }
 }
@@ -64,7 +64,7 @@ $conn->close(); ?>
         <div class="cover-container">
 
             <div class="inner cover">
-                <h1 class="cover-heading">Welcome to the DevOps Demo Application v2.</h1>
+                <h1 class="cover-heading">Welcome to the DevOps Demo Application v2.10</h1>
                 <p class="lead"><i>This app is used for demonstrating and testing various DevOps, CI, and CD concepts.</i></p>
                 <h3>Connection to MySQL DB:
                     <?php
