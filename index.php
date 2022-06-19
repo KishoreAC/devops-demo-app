@@ -11,14 +11,14 @@ $conn = @new mysqli($config['hostname'], $config['username'], $config['password'
 
 if ($conn->connect_errno) {
 }
-else {frontend-f5797dcc5-tfzf6
+else {
     $dbSuccess = true;
 }
 $sql = "SELECT version FROM dbversion ORDER BY id DESC LIMIT 1";
-$result = $conn->query($sql);frontend-f5797dcc5-tfzf6
+$result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc()) {frontend-f5797dcc5-tfzf6
+    while($row = $result->fetch_assoc()) {
         $dbVersion = $row['version'];
     }
 }
